@@ -16,6 +16,8 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  line-height: 1.6;
   /* background: linear-gradient(135deg, #6dd5ed, #2193b0); */
   font-size: 1.8rem;
   overflow-x: hidden;
+  min-height: 100vh; /* Ensures body covers full viewport height */
+  min-width: 100vw; /* Prevents horizontal overflow */
 
 }
 
@@ -63,15 +65,18 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  line-height: 1.6;
 /* Hero Section */
 .hero {
   position: relative;
-  height: 100vh;
+  min-height: 100vw;
+  min-height: 100vh; /* Allows dynamic height */
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-    padding-top: 200px; /* Height of the navbar */
+    padding-top: 500px; /* Height of the navbar */
   overflow: hidden;
 background: #020024;
-background: linear-gradient(135deg, rgb(4, 1, 54) 0%, rgb(7, 7, 130) 55%, rgb(5, 5, 91) 97%);}
+background: linear-gradient(135deg, rgb(4, 1, 54) 0%, rgb(7, 7, 130) 55%, rgb(5, 5, 91) 97%);
+overflow: hidden;
+}
 
 
 
@@ -490,6 +495,7 @@ padding-bottom: 2rem;
   }
 
   .hero {
+    padding-top: 500px;
     grid-template-columns: 1fr 1fr; /* Maintain two-column layout */
     gap: 6rem; /* Increase gap between text and image */
     padding: 8rem 6rem; /* Add generous padding for large screens */
