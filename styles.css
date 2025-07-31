@@ -24,7 +24,7 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  line-height: 1.6;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1rem 1.5rem;
   background: rgba(255, 255, 255, 0.9);
   position: fixed;
   top: 0;
@@ -68,6 +68,7 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  line-height: 1.6;
   justify-content: center;
   align-items: center;
   text-align: center;
+    padding-top: 200px; /* Height of the navbar */
   overflow: hidden;
 background: #020024;
 background: linear-gradient(135deg, rgb(4, 1, 54) 0%, rgb(7, 7, 130) 55%, rgb(5, 5, 91) 97%);}
@@ -343,7 +344,7 @@ padding-bottom: 2rem;
   .navbar {
     flex-direction: column;
     align-items: flex-start;
-    padding: 1rem;
+    /* padding: 1rem; */
     background: rgba(255, 255, 255, 0.95); /* Slightly darker for better contrast */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
   }
@@ -378,7 +379,7 @@ padding-bottom: 2rem;
   /* Hero Section */
   .hero {
     height: auto; /* Remove fixed height to allow dynamic adjustment */
-    padding-top: 10rem; /* Add padding to account for the taller navbar */
+    padding-top: 200px; /* Add padding to account for the taller navbar */
   }
 
   .hero-container {
@@ -597,7 +598,7 @@ padding-bottom: 2rem;
 
 
 .about-image {
-  flex: 1; /* Takes up 40% of the width */
+  flex: 1;/*  Takes up 40% of the width */
   max-width: 500px;
 }
 
@@ -617,13 +618,49 @@ padding-bottom: 2rem;
   outline: transparent;
 }
 
+.education {
+  margin: 3rem;
+}
+
+
+.education-item {
+  margin-bottom: 2rem;
+}
+
+.degree {
+  font-size: 2rem;
+  color: #2193b0; /* Accent color */
+  margin-bottom: 0.5rem;
+}
+
+.institution {
+  font-size: 1.8rem;
+  color: #555;
+  margin-bottom: 0.3rem;
+}
+
+.duration {
+  font-size: 1.6rem;
+  color: #777;
+  margin-bottom: 1rem;
+}
+
+.details, .note, .achievements {
+  font-size: 1.4rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+
+
 /* Small Screens (Mobile - Max Width: 768px) */
 @media (max-width: 768px) {
   /* About Container */
   .about-container {
-    grid-template-columns: 1fr; /* Stack text and image vertically */
-    gap: 2rem; /* Reduce gap between elements */
-    text-align: center; /* Center-align content for better readability */
+    display: grid; /* Override any flexbox layout */
+    grid-template-columns: 1fr; /* Stack elements vertically */
+    gap: 2rem;
+    text-align: center;
   }
 
   /* About Text */
@@ -665,7 +702,7 @@ padding-bottom: 2rem;
 @media (min-width: 769px) and (max-width: 1024px) {
   /* About Container */
   .about-container {
-    grid-template-columns: 1fr 1fr; /* Maintain two-column layout */
+    grid-template-columns:  1fr; 
     gap: 3rem; /* Slightly reduce gap between text and image */
   }
 
@@ -690,6 +727,134 @@ padding-bottom: 2rem;
   /* No changes needed as the base styles are already optimized */
 }
 
+
+/* Media Queries for Responsiveness */
+
+/* Large Desktop Screens (≥1200px) */
+@media (min-width: 1200px) {
+  .education {
+    margin: 4rem;
+  }
+
+  .degree {
+    font-size: 2.2rem;
+  }
+
+  .institution {
+    font-size: 2rem;
+  }
+
+  .duration {
+    font-size: 1.8rem;
+  }
+
+  .details,
+  .note,
+  .achievements {
+    font-size: 1.6rem;
+  }
+}
+
+/* Desktop Screens (992px–1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .education {
+    margin: 3.5rem;
+  }
+
+  .degree {
+    font-size: 2rem;
+  }
+
+  .institution {
+    font-size: 1.8rem;
+  }
+
+  .duration {
+    font-size: 1.6rem;
+  }
+
+  .details,
+  .note,
+  .achievements {
+    font-size: 1.4rem;
+  }
+}
+
+/* Tablet Landscape (768px–991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .education {
+    margin: 3rem;
+  }
+
+  .degree {
+    font-size: 1.8rem;
+  }
+
+  .institution {
+    font-size: 1.6rem;
+  }
+
+  .duration {
+    font-size: 1.4rem;
+  }
+
+  .details,
+  .note,
+  .achievements {
+    font-size: 1.3rem;
+  }
+}
+
+/* Tablet Portrait (576px–767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .education {
+    margin: 2.5rem;
+  }
+
+  .degree {
+    font-size: 1.6rem;
+  }
+
+  .institution {
+    font-size: 1.4rem;
+  }
+
+  .duration {
+    font-size: 1.2rem;
+  }
+
+  .details,
+  .note,
+  .achievements {
+    font-size: 1.2rem;
+  }
+}
+
+/* Mobile Screens (≤575px) */
+@media (max-width: 575px) {
+  .education {
+    margin: 2rem;
+  }
+
+  .degree {
+    font-size: 1.4rem;
+  }
+
+  .institution {
+    font-size: 1.2rem;
+  }
+
+  .duration {
+    font-size: 1rem;
+  }
+
+  .details,
+  .note,
+  .achievements {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+}
 /* SKILL SECTION */
 
 /* General Styles */
